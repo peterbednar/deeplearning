@@ -1,4 +1,4 @@
-# Seminár o hlbokom učení
+# Pokročilé metódy analýzy dát
 
 ## Inštalácia
 
