@@ -1,8 +1,8 @@
 # Pokročilé metódy analýzy dát
 
-Návody na cvičenia môže spustiť v prostredí [DataLab](https://datalab.kkui.fei.tuke.sk).
+Návody na cvičenia môžete spustiť v prostredí [DataLab](https://datalab.kkui.fei.tuke.sk).
 
-### Návod na spustenie na lokálnom počítači:
+### Spustenie na lokálnom počítači:
 
 1. Nainštalujte si [Docker](https://https://docs.docker.com/get-docker/)
 2. V príkazovom riadku sa prepnite do vášho lokálneho adresára v ktorom máte súbory s ktorými chcete pracovať a spustite kontajner s prostredím JupyterLab.
