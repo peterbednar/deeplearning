@@ -1,14 +1,25 @@
 # Pokročilé metódy analýzy dát
 
-## Inštalácia
+Návody na cvičenia môže spustiť v prostredí [DataLab](https://datalab.kkui.fei.tuke.sk).
 
-1. Nainštalujte [Python 3.7](https://www.python.org/downloads/) 
-2. Pre Windows 10 nainštalujte [Microsoft Visual C++ Redistributable for Visual Studio 2015, 2017 and 2019](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads)
-3. V príkazovom riadku nainštalujte pomocou príkazu PiP nasledujúce moduly:
-    - `pip install tensorflow`
-    - `pip install matplotlib`
-4. Nainštalujte si prostredie Jupyter Notebook
-    - `pip install jupyter`
-5. Stiahnite si a rozbalte tento projekt (môžete ho naklonovať aj cez Git)
-6. V príkazovom riadku sa prepnite do adresára, kde ste si uložili projekt a spustite Jupyter Notebook
-    - `jupyter notebook` 
+### Návod na spustenie na lokálnom počítači:
+
+1. Nainštalujte si [Docker](https://https://docs.docker.com/get-docker/)
+2. V príkazovom riadku sa prepnite do vášho lokálneho adresára v ktorom máte súbory s ktorými chcete pracovať a spustite kontajner s prostredím JupyterLab.
+
+   **pre Linux**
+   ```console
+   docker container run -it --rm -p 8888:8888 -v "${PWD}":/home/jovyan/work peterbednar/tensorflow-notebook:2.3.1
+   ```
+   **pre Windows**
+   ```console
+   docker container run -it --rm -p 8888:8888 -v "%CD%":/home/jovyan/work peterbednar/tensorflow-notebook:2.3.1
+   ```
+3. V prehliadači sa pripojte na ```http://localhost:8888```. Pre prihlásenie zadajte token zobrazený v konzole príkazového riadku.
+
+### GPU
+
+Ak máte operačný systém Linux a grafickú kartu Nvidia, môžete spustit kontajner s podporou výpočtov na grafickej karte.
+```console
+docker container run -it --rm -p 8888:8888 -v "${PWD}":/home/jovyan/work peterbednar/tensorflow-gpu-notebook:2.3.1
+```
